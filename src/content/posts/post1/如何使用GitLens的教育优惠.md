@@ -3,7 +3,7 @@ title: 如何使用GitLens的教育优惠
 published: 2025-10-22
 description: '申请GitLens教育优惠的具体步骤'
 image: ''
-tags: ["Blogging", "GitLens", "Education Discount"]
+tags: ["Blogging", "GitLens", "Education Discount", "Tutorials"]
 category: 'Tutorials'
 draft: false 
 ---
