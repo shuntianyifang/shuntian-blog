@@ -25,7 +25,7 @@ export function GithubCardComponent(properties, children) {
 	const repo = properties.repo;
 	const cardUuid = `GC${Math.random().toString(36).slice(-6)}`; // Collisions are not important
 
-	const nAvatar = h(`div#${cardUuid}-avatar`, { class: "gc-avatar" });
+	const nhikari = h(`div#${cardUuid}-hikari`, { class: "gc-hikari" });
 	const nLanguage = h(
 		`span#${cardUuid}-language`,
 		{ class: "gc-language" },
@@ -35,7 +35,7 @@ export function GithubCardComponent(properties, children) {
 	const nTitle = h("div", { class: "gc-titlebar" }, [
 		h("div", { class: "gc-titlebar-left" }, [
 			h("div", { class: "gc-owner" }, [
-				nAvatar,
+				nhikari,
 				h("div", { class: "gc-user" }, repo.split("/")[0]),
 			]),
 			h("div", { class: "gc-divider" }, "/"),
@@ -63,9 +63,9 @@ export function GithubCardComponent(properties, children) {
         document.getElementById('${cardUuid}-language').innerText = data.language;
         document.getElementById('${cardUuid}-forks').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.forks).replaceAll("\u202f", '');
         document.getElementById('${cardUuid}-stars').innerText = Intl.NumberFormat('en-us', { notation: "compact", maximumFractionDigits: 1 }).format(data.stargazers_count).replaceAll("\u202f", '');
-        const avatarEl = document.getElementById('${cardUuid}-avatar');
-        avatarEl.style.backgroundImage = 'url(' + data.owner.avatar_url + ')';
-        avatarEl.style.backgroundColor = 'transparent';
+        const hikariEl = document.getElementById('${cardUuid}-hikari');
+        hikariEl.style.backgroundImage = 'url(' + data.owner.hikari_url + ')';
+        hikariEl.style.backgroundColor = 'transparent';
         document.getElementById('${cardUuid}-license').innerText = data.license?.spdx_id || "no-license";
         document.getElementById('${cardUuid}-card').classList.remove("fetch-waiting");
         console.log("[GITHUB-CARD] Loaded card for ${repo} | ${cardUuid}.")
