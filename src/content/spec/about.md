@@ -9,6 +9,7 @@
 > - ## 友链  
 >
 > - [v185v的博客](https://blog.v185v.xyz/)
+> - [Fridayssheep的鲸湾](https://blog.fridayssheep.top)  
 >
 > - ## Sources of the blog template  
 >  
