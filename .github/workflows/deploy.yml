@@ -23,9 +23,9 @@ jobs:
           git config --global url."https://github.com/".insteadOf git@github.com:
           git config --global url."https://".insteadOf ssh://
       - name: Checkout
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5
       - name: Install, build, and upload your site
-        uses: withastro/action@v4.2.1
+        uses: withastro/action@v4
         # with:
           # path: . # 存储库中 Astro 项目的根位置。（可选）
           # node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）
